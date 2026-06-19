@@ -2,6 +2,7 @@
 
 **Agent:** [`agents/solution-critic/solution-critic.md`](../../agents/solution-critic/solution-critic.md)
 **Wiring:** [`agents/solution-critic/CLAUDE-snippet.md`](../../agents/solution-critic/CLAUDE-snippet.md)
+**Background:** [I Taught Claude to Criticize Itself So I Don't Have To](https://app.notion.com/p/bobcats-coding/I-Taught-Claude-to-Criticize-Itself-So-I-Don-t-Have-To-36c1c06aab6e805e81def38da0dc7af3)
 **Related:** [[plan-critic]] · **Principles:** [[../concepts/seed-design-principles]]
 
 ## What it is
