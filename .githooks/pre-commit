@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+#
+# Guard pre-commit hook: blocks a commit if staged artifact changes aren't documented.
+#
+# It does NOT write docs. It asks the /document command (in read-only --check mode) whether the
+# staged artifacts are documented in the README + wiki. If not, it blocks with instructions to run
+# `/document`, review the generated docs, stage them, and recommit.
+#
+# Philosophy: guard only (so generated docs are reviewed before they land). Fail-OPEN on tooling
+# errors (missing `claude`, auth failure, check crash) so a clone without Claude is never wedged.
+# Block ONLY on a definite UNDOCUMENTED verdict. Bypass anytime with `git commit --no-verify`.
+#
+# Enable once per clone:  git config core.hooksPath .githooks
+
+set -u
+
+# Directories whose files are publishable artifacts that must be documented.
+ARTIFACT_DIRS=(seeds tools agents scripts)
+
+# 1. Defensive re-entry guard.
+if [ -n "${AI_UTILS_DOC_GUARD:-}" ]; then
+  exit 0
+fi
+export AI_UTILS_DOC_GUARD=1
+
+# 2. Cheap gate (no LLM): is any staged path under an artifact dir? If not, allow immediately.
+staged="$(git diff --cached --name-only --diff-filter=ACMR)"
+pattern="^($(IFS='|'; echo "${ARTIFACT_DIRS[*]}"))/"
+if ! grep -Eq "$pattern" <<<"$staged"; then
+  exit 0
+fi
+
+# 3. Fail-open if the checker can't run.
+if ! command -v claude >/dev/null 2>&1; then
+  echo "ℹ️  doc-guard: 'claude' not found on PATH — skipping the documentation check." >&2
+  echo "    (Install Claude Code to enable it, or ignore. Commit proceeds.)" >&2
+  exit 0
+fi
+
+echo "🔍 doc-guard: checking whether staged artifact changes are documented…" >&2
+
+out="$(claude -p "/document --check" \
+  --permission-mode dontAsk \
+  --allowedTools "Read Glob Grep Bash(git diff:*) Bash(git show:*) Bash(git status:*) Bash(git log:*) Bash(git ls-files:*)" \
+  2>/dev/null)"
+rc=$?
+
+# 4. Interpret the verdict.
+if [ $rc -ne 0 ] || ! grep -q "DOC_STATUS:" <<<"$out"; then
+  echo "⚠️  doc-guard: documentation check could not complete (exit $rc). Allowing commit." >&2
+  exit 0
+fi
+
+if grep -q "DOC_STATUS: UNDOCUMENTED" <<<"$out"; then
+  echo "" >&2
+  echo "$out" >&2
+  echo "" >&2
+  echo "❌ doc-guard: staged artifact changes are not documented." >&2
+  echo "   Fix it with one of:" >&2
+  echo "     • run  /document  in Claude Code, review the generated docs, then stage and recommit" >&2
+  echo "     • git commit --no-verify   (skip this check)" >&2
+  exit 1
+fi
+
+echo "✅ doc-guard: documentation is up to date." >&2
+exit 0
