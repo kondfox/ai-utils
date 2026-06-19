@@ -1,9 +1,9 @@
 # Version-checker hook seed
 
-**Source:** [`seeds/version-checker-hook-seed.md`](../../seeds/version-checker-hook-seed.md)
-**Background:** [Version-checker hook — Claude Code](https://app.notion.com/p/bobcats-coding/Version-checker-hook-Claude-Code-31b1c06aab6e809496c2de877f9b77ab)
-**Reference implementation:** [kondfox/isuperhero-claude](https://github.com/kondfox/isuperhero-claude) (`scripts/check-versions.ts`, TypeScript/Bun)
-**Principles:** [[../concepts/seed-design-principles]]
+**Source:** [`seeds/version-checker-hook-seed.md`](../../seeds/version-checker-hook-seed.md)<br>
+**Background:** [Version-checker hook — Claude Code](https://app.notion.com/p/bobcats-coding/Version-checker-hook-Claude-Code-31b1c06aab6e809496c2de877f9b77ab)<br>
+**Reference implementation:** [kondfox/isuperhero-claude](https://github.com/kondfox/isuperhero-claude) (`scripts/check-versions.ts`, TypeScript/Bun)<br>
+**Principles:** [Seed design principles](../concepts/seed-design-principles.md)
 
 ## What it is
 

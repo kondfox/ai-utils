@@ -1,8 +1,9 @@
 # /lesson command seed
 
-**Source:** [`seeds/lesson-command-seed.md`](../../seeds/lesson-command-seed.md)
-**Background:** [Turning Human Corrections Into Organizational Memory](https://app.notion.com/p/bobcats-coding/Turning-Human-Corrections-Into-Organizational-Memory-3741c06aab6e80f6a79ee47c42b31a89)
-**Concept:** [[../concepts/human-feedback-loop]] · **Principles:** [[../concepts/seed-design-principles]]
+**Source:** [`seeds/lesson-command-seed.md`](../../seeds/lesson-command-seed.md)<br>
+**Background:** [Turning Human Corrections Into Organizational Memory](https://app.notion.com/p/bobcats-coding/Turning-Human-Corrections-Into-Organizational-Memory-3741c06aab6e80f6a79ee47c42b31a89)<br>
+**Concept:** [Human-feedback loop](../concepts/human-feedback-loop.md)<br>
+**Principles:** [Seed design principles](../concepts/seed-design-principles.md)
 
 ## What it is
 

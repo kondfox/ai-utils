@@ -1,8 +1,8 @@
 # Quick-win routine seed
 
-**Source:** [`seeds/quick-win-routine-seed.md`](../../seeds/quick-win-routine-seed.md)
-**Background:** [Tip of the Day But It's a PR: Our Daily Claude Routine for Tiny Fixes](https://app.notion.com/p/bobcats-coding/Tip-of-the-Day-But-It-s-a-PR-Our-Daily-Claude-Routine-for-Tiny-Fixes-3781c06aab6e8191abf8fe5e2153d4df)
-**Principles:** [[../concepts/seed-design-principles]]
+**Source:** [`seeds/quick-win-routine-seed.md`](../../seeds/quick-win-routine-seed.md)<br>
+**Background:** [Tip of the Day But It's a PR: Our Daily Claude Routine for Tiny Fixes](https://app.notion.com/p/bobcats-coding/Tip-of-the-Day-But-It-s-a-PR-Our-Daily-Claude-Routine-for-Tiny-Fixes-3781c06aab6e8191abf8fe5e2153d4df)<br>
+**Principles:** [Seed design principles](../concepts/seed-design-principles.md)
 
 ## What it is
 

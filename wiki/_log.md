@@ -2,6 +2,7 @@
 
 Append-only. Newest first. One self-contained line per entry.
 
+- 2026-06-19 — Made artifact-page metadata headers render well on GitHub: one field per line (trailing `<br>`, since GFM collapses bare newlines) and header cross-links as standard Markdown links instead of `[[wiki-links]]` (which GitHub shows literally; Obsidian resolves both). Applied to all seed/agent pages and codified in [[CLAUDE]].
 - 2026-06-19 — Added the [[seeds/quick-win-routine]] seed (daily unattended Claude Code routine that opens one small, verified PR); documented it in the README Seeds table, [[index]], and [[seeds/_index]], with a background article link.
 - 2026-06-19 — Added the [[seeds/version-checker-hook]] seed (dependency version-checker feedback loop: checker script + PostToolUse hook + pre-commit gate); documented it in the README Seeds table, [[index]], and [[seeds/_index]], with a background article link.
 - 2026-06-19 — Linked the background article ("I Taught Claude to Criticize Itself So I Don't Have To") on [[agents/plan-critic]] and [[agents/solution-critic]].

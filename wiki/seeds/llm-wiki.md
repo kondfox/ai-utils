@@ -1,8 +1,9 @@
 # LLM Wiki seed
 
-**Source:** [`seeds/llm-wiki-seed-prompt.md`](../../seeds/llm-wiki-seed-prompt.md)
-**Background:** [Karpathy's LLM Wiki in production — self-writing RFCs, postmortems, and runbooks](https://app.notion.com/p/bobcats-coding/Karpathy-s-LLM-Wiki-in-production-self-writing-RFCs-postmortems-and-runbooks-35d1c06aab6e800584cecd08ce158024)
-**Concept:** [[../concepts/llm-wiki-pattern]] · **Principles:** [[../concepts/seed-design-principles]]
+**Source:** [`seeds/llm-wiki-seed-prompt.md`](../../seeds/llm-wiki-seed-prompt.md)<br>
+**Background:** [Karpathy's LLM Wiki in production — self-writing RFCs, postmortems, and runbooks](https://app.notion.com/p/bobcats-coding/Karpathy-s-LLM-Wiki-in-production-self-writing-RFCs-postmortems-and-runbooks-35d1c06aab6e800584cecd08ce158024)<br>
+**Concept:** [LLM Wiki pattern](../concepts/llm-wiki-pattern.md)<br>
+**Principles:** [Seed design principles](../concepts/seed-design-principles.md)
 
 ## What it is
 

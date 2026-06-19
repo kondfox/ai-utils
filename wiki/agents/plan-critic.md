@@ -1,9 +1,10 @@
 # plan-critic
 
-**Agent:** [`agents/plan-critic/plan-critic.md`](../../agents/plan-critic/plan-critic.md)
-**Wiring:** [`agents/plan-critic/CLAUDE-snippet.md`](../../agents/plan-critic/CLAUDE-snippet.md)
-**Background:** [I Taught Claude to Criticize Itself So I Don't Have To](https://app.notion.com/p/bobcats-coding/I-Taught-Claude-to-Criticize-Itself-So-I-Don-t-Have-To-36c1c06aab6e805e81def38da0dc7af3)
-**Related:** [[solution-critic]] · **Principles:** [[../concepts/seed-design-principles]]
+**Agent:** [`agents/plan-critic/plan-critic.md`](../../agents/plan-critic/plan-critic.md)<br>
+**Wiring:** [`agents/plan-critic/CLAUDE-snippet.md`](../../agents/plan-critic/CLAUDE-snippet.md)<br>
+**Background:** [I Taught Claude to Criticize Itself So I Don't Have To](https://app.notion.com/p/bobcats-coding/I-Taught-Claude-to-Criticize-Itself-So-I-Don-t-Have-To-36c1c06aab6e805e81def38da0dc7af3)<br>
+**Related:** [solution-critic](solution-critic.md)<br>
+**Principles:** [Seed design principles](../concepts/seed-design-principles.md)
 
 ## What it is
 

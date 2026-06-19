@@ -82,12 +82,18 @@ together.
 **Artifact page** (`seeds/`, future `tools/` …):
 ```
 # <Name>
-**Source:** <link to the artifact file>   **Background:** <external writeup, if any>
+**Source:** <link to the artifact file><br>
+**Background:** <external writeup, if any>
 ## What it is        (and the problem it solves)
 ## How to use it
 ## What it produces
 ## Caveats / known limitations
 ```
+One metadata field per line, each ending with a trailing `<br>` (except the last) so the block renders
+as separate lines on GitHub — GitHub-flavored Markdown collapses a bare newline into a space, where
+Obsidian wouldn't. In the header, use **standard Markdown links** (`[text](../concepts/foo.md)`), not
+`[[wiki-links]]`: GitHub renders Obsidian `[[ ]]` as literal text, and Markdown links to `.md` files
+resolve in both GitHub and Obsidian. (`[[wiki-links]]` are still fine in body prose.)
 
 **Decision page** (`decisions/`):
 ```
