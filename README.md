@@ -29,6 +29,7 @@ seed is not the thing it builds — it's the prompt that builds it.
 | LLM Wiki | An in-codebase implementation of Karpathy's LLM Wiki — a self-maintaining, LLM-written knowledge base | [details](wiki/seeds/llm-wiki.md) |
 | /lesson command | A human-feedback → organizational-memory loop that self-improves the repo's agent instructions | [details](wiki/seeds/lesson-command.md) |
 | Version-checker hook | A dependency version-checker feedback loop (checker + PostToolUse hook + pre-commit gate) that keeps AI-added deps aligned and current | [details](wiki/seeds/version-checker-hook.md) |
+| Quick-win routine | A daily unattended Claude Code routine that finds one tiny, verified improvement and opens a PR | [details](wiki/seeds/quick-win-routine.md) |
 
 ## Agents
 

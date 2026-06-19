@@ -14,3 +14,4 @@ produces / Caveats / Links to the prompt file and any external writeup.
 - [[llm-wiki]] — an in-codebase implementation of Karpathy's LLM Wiki (the [[../concepts/llm-wiki-pattern]]).
 - [[lesson-command]] — a [[../concepts/human-feedback-loop]] that self-improves the repo's agent instructions.
 - [[version-checker-hook]] — a dependency version-checker feedback loop (checker script + PostToolUse hook + pre-commit gate).
+- [[quick-win-routine]] — a daily unattended routine that finds one tiny fix and opens a PR.

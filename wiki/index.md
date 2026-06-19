@@ -15,6 +15,7 @@ Project-independent prompts you paste into Claude Code to bootstrap a project-sp
 - [[seeds/llm-wiki]] — an in-codebase implementation of Karpathy's LLM Wiki.
 - [[seeds/lesson-command]] — a human-feedback → organizational-memory loop.
 - [[seeds/version-checker-hook]] — a dependency version-checker feedback loop.
+- [[seeds/quick-win-routine]] — a daily unattended routine that finds one tiny fix and opens a PR.
 
 ### Agents
 Ready-to-use Claude Code subagents you drop into `.claude/agents/` and wire up with a snippet.
