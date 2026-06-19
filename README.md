@@ -43,6 +43,9 @@ independently.
 
 ## Contributing
 
+Contributions go through a **pull request** — `main` is protected, so open a PR from a branch or fork
+for any new artifact or change, and a maintainer will review and merge it.
+
 Docs (the README table + `wiki/`) are kept in lockstep with the artifacts. Two pieces help:
 
 - **`/document`** — a Claude Code command that generates or updates the docs for staged artifact
