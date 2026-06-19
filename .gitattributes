@@ -1,0 +1,4 @@
+# The wiki changelog is an append-only hotspot; keep both sides on conflict.
+# (Git's built-in `union` driver — resolves concurrent appends locally. Note: GitHub's web UI
+# does not support `union`, so a _log.md conflict in a PR still needs a local merge.)
+wiki/_log.md merge=union
