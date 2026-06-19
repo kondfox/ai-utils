@@ -10,8 +10,9 @@ comparing notes, and improving each other's work.
 ## Contents
 
 - [Seeds](#seeds) — copy-paste bootstrap prompts
+- [Agents](#agents) — ready-to-use Claude Code subagents + wiring
 
-_More categories (tools, agents, scripts, techniques…) will be added as they're built._
+_More categories (tools, scripts, techniques…) will be added as they're built._
 
 The [`wiki/`](wiki/index.md) is this repo's knowledge base — the ideas behind the artifacts,
 the decisions that shaped the repo, and its glossary.
@@ -27,6 +28,18 @@ seed is not the thing it builds — it's the prompt that builds it.
 | --- | --- | --- |
 | LLM Wiki | An in-codebase implementation of Karpathy's LLM Wiki — a self-maintaining, LLM-written knowledge base | [details](wiki/seeds/llm-wiki.md) |
 | /lesson command | A human-feedback → organizational-memory loop that self-improves the repo's agent instructions | [details](wiki/seeds/lesson-command.md) |
+
+## Agents
+
+Ready-to-use Claude Code subagents. Each lives in its own folder under `agents/<name>/` as a bundle:
+the agent definition (drop it into your project's `.claude/agents/`) plus a `CLAUDE-snippet.md` whose
+section you paste into your root `CLAUDE.md` / `AGENTS.md` to actually invoke it. Each integrates
+independently.
+
+| Agent | What it does | Details |
+| --- | --- | --- |
+| plan-critic | Challenges a proposed plan in plan mode before `ExitPlanMode`, until it's genuinely solid | [details](wiki/agents/plan-critic.md) |
+| solution-critic | Challenges a finished implementation (diff, tests, scope, loose ends) before it's announced done | [details](wiki/agents/solution-critic.md) |
 
 ## Contributing
 

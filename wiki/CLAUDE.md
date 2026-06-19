@@ -30,10 +30,15 @@ ideas behind them.
 | `_log.md` | Append-only changelog, newest first, one self-contained line per entry. |
 | `glossary.md` | Domain vocabulary. |
 | `seeds/` | One page per published **seed** artifact. Mirrors the README's Seeds category. |
+| `agents/` | One page per published **agent** artifact. Mirrors the README's Agents category. |
 | `concepts/` | Cross-cutting ideas/techniques the artifacts embody or teach. |
 | `decisions/` | One page per repo-level decision: `YYYY-MM-DD-<slug>.md`. |
 
 Each category folder has an `_index.md` describing its purpose and page format.
+
+An artifact may be a **single file** (e.g. a seed: `seeds/<name>.md`) or a **bundle folder** (e.g. an
+agent: `agents/<name>/` holding the agent definition + its `CLAUDE-snippet.md`). Either way it maps to
+one wiki page named for the artifact (`agents/<name>/` → `wiki/agents/<name>.md`).
 
 ## When to update the wiki (the maintenance contract)
 

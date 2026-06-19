@@ -3,11 +3,26 @@
 Domain vocabulary used across this repo. Terms link to the pages that explain them in depth.
 
 - **Artifact** — any reusable thing this repo publishes from real agentic-engineering workflows: a
-  prompt, tool, technique, script, or agent. Currently the only category is seeds.
+  prompt, tool, technique, script, or agent. Categories so far: [[seeds/_index|seeds]] and
+  [[agents/_index|agents]]. An artifact may be a single file or a bundle folder.
 
 - **Seed** — a project-independent prompt you paste into Claude Code at the root of your own repo; it
   discovers your project and bootstraps a project-specific utility. See [[seeds/_index]] and
   [[concepts/seed-design-principles]]. (The seed is the *prompt*, not the thing it builds.)
+
+- **Agent** — a ready-to-use Claude Code subagent shipped as a bundle folder (`agents/<name>/`: the
+  agent definition + its `CLAUDE-snippet.md` wiring). Unlike a seed, it's installed, not bootstrapped.
+  See [[agents/_index]].
+
+- **plan-critic** — an agent that challenges a plan in plan mode before `ExitPlanMode` until it's
+  genuinely solid. See [[agents/plan-critic]].
+
+- **solution-critic** — an agent that challenges a finished implementation (real diff, tests, scope,
+  loose ends) before it's announced done. See [[agents/solution-critic]].
+
+- **Challenge protocol** — the loop both critics run in: dispatch the critic, address every concern,
+  re-dispatch until it returns `approved` (the critic decides, not the main agent), capped at 5 rounds.
+  Defined in each agent's `CLAUDE-snippet.md`.
 
 - **LLM Wiki** — a persistent, LLM-maintained knowledge base kept current as a side effect of normal
   work. See [[concepts/llm-wiki-pattern]]; the `wiki/` folder is itself one.
