@@ -31,21 +31,23 @@ ideas behind them.
 | `glossary.md` | Domain vocabulary. |
 | `seeds/` | One page per published **seed** artifact. Mirrors the README's Seeds category. |
 | `agents/` | One page per published **agent** artifact. Mirrors the README's Agents category. |
+| `skills/` | One page per published **skill** artifact. Mirrors the README's Skills category. |
 | `concepts/` | Cross-cutting ideas/techniques the artifacts embody or teach. |
 | `decisions/` | One page per repo-level decision: `YYYY-MM-DD-<slug>.md`. |
 
 Each category folder has an `_index.md` describing its purpose and page format.
 
 An artifact may be a **single file** (e.g. a seed: `seeds/<name>.md`) or a **bundle folder** (e.g. an
-agent: `agents/<name>/` holding the agent definition + its `CLAUDE-snippet.md`). Either way it maps to
-one wiki page named for the artifact (`agents/<name>/` → `wiki/agents/<name>.md`).
+agent: `agents/<name>/` holding the agent definition + its `CLAUDE-snippet.md`; or a skill:
+`skills/<name>/` holding its `SKILL.md`). Either way it maps to one wiki page named for the artifact
+(`agents/<name>/` → `wiki/agents/<name>.md`).
 
 ## When to update the wiki (the maintenance contract)
 
 Treat this as a checklist for the task at hand:
 
-- **New artifact published** (a new seed, or later a tool/agent/script) → add a page in the matching
-  category folder, **add it to the README table**, and link it from `index.md`.
+- **New artifact published** (a new seed, agent, skill, or later a tool/script) → add a page in the
+  matching category folder, **add it to the README table**, and link it from `index.md`.
 - **Existing artifact changed or extended** → update its page.
 - **A cross-cutting idea emerges or gets clarified** (a recurring technique, principle, or pattern) →
   add/update a `concepts/` page.

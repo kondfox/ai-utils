@@ -11,6 +11,7 @@ comparing notes, and improving each other's work.
 
 - [Seeds](#seeds) — copy-paste bootstrap prompts
 - [Agents](#agents) — ready-to-use Claude Code subagents + wiring
+- [Skills](#skills) — ready-to-use Claude Code skills
 
 _More categories (tools, scripts, techniques…) will be added as they're built._
 
@@ -43,6 +44,16 @@ independently.
 | plan-critic | Challenges a proposed plan in plan mode before `ExitPlanMode`, until it's genuinely solid | [details](wiki/agents/plan-critic.md) |
 | solution-critic | Challenges a finished implementation (diff, tests, scope, loose ends) before it's announced done | [details](wiki/agents/solution-critic.md) |
 
+## Skills
+
+Ready-to-use Claude Code skills. Each lives in its own folder under `skills/<name>/` holding its
+`SKILL.md`. Copy the folder into your project's `.claude/skills/` (or `~/.claude/skills/` to have it
+everywhere) and invoke it by name — no wiring needed.
+
+| Skill | What it does | Details |
+| --- | --- | --- |
+| plan-prs | Splits a specification into an ordered chain of PR-sized chunks, quizzing you until the chain holds up | [details](wiki/skills/plan-prs.md) |
+
 ## Contributing
 
 Contributions go through a **pull request** — `main` is protected, so open a PR from a branch or fork
@@ -52,9 +63,9 @@ Docs (the README table + `wiki/`) are kept in lockstep with the artifacts. Two p
 
 - **`/document`** — a Claude Code command that generates or updates the docs for staged artifact
   changes. Run it, review what it wrote, then stage and commit.
-- **A guard pre-commit hook** — blocks a commit when staged artifacts under `seeds/` (or future
-  `tools/`, `agents/`, `scripts/`) aren't documented yet, pointing you at `/document`. It only
-  *checks* — it never writes docs — so you always review them first.
+- **A guard pre-commit hook** — blocks a commit when staged artifacts under `seeds/`, `agents/`,
+  `skills/` (or future `tools/`, `scripts/`) aren't documented yet, pointing you at `/document`. It
+  only *checks* — it never writes docs — so you always review them first.
 
 Enable the hook once after cloning:
 

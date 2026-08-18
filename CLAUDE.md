@@ -28,7 +28,7 @@ A continuously-growing, public collection of artifacts that proved useful in rea
 workflows — prompts, tools, techniques, scripts, and agents — packaged for others to reuse. It is
 shared for the common good; feedback is welcome.
 
-`seeds/` is the first and currently only category. The other categories (tools, agents, scripts,
+`seeds/`, `agents/` and `skills/` are the categories published so far. The others (tools, scripts,
 techniques) don't exist yet — they'll be added as they're built. There is no build, no test suite,
 no lint, no package manifest. Work in this repo is authoring and editing Markdown.
 
@@ -44,6 +44,15 @@ the root of *some other* repository to bootstrap a reusable agentic system there
 - `seeds/llm-wiki-seed-prompt.md` — bootstraps a persistent, LLM-maintained knowledge base (an
   "LLM Wiki", per Karpathy's pattern) in a target repo, kept current as a side effect of normal work.
 
+### Agents and skills
+
+An **agent** is a ready-to-use Claude Code subagent, shipped as a bundle folder `agents/<name>/`: the
+agent definition plus a `CLAUDE-snippet.md` whose section the user pastes into their root `CLAUDE.md`
+to invoke it. A **skill** is a ready-to-use Claude Code skill, shipped as a bundle folder
+`skills/<name>/` holding its `SKILL.md`; the user copies the folder into `.claude/skills/` and invokes
+it by name. Unlike a seed, both are the finished thing — installed, not bootstrapped — so the
+"discover the target repo first" rule below applies to seeds only.
+
 ## Repo layout — where things go
 
 - **`seeds/<name>.md`** — the seed prompts themselves. Keep these **pure and copy-paste-clean**: a
@@ -52,6 +61,8 @@ the root of *some other* repository to bootstrap a reusable agentic system there
 - **`wiki/seeds/<name>.md`** — the longer human-facing description of each seed (what it is, how to
   use it, what it produces, caveats), plus `[[wiki-link]]` cross-links. These link back to the prompt
   file and out to any external writeup. This is where prose about a seed lives, not in the prompt.
+- **`agents/<name>/`, `skills/<name>/`** — artifact bundle folders; each maps to one wiki page
+  (`wiki/agents/<name>.md`, `wiki/skills/<name>.md`).
 - **`wiki/`** — the knowledge base (artifact pages, `concepts/`, `decisions/`, `glossary.md`). See
   `wiki/CLAUDE.md` for its schema and taxonomy. Prose about *ideas* (not a single artifact) goes here.
 - **`README.md`** — the top-level index. The Seeds section is a table linking each seed to its

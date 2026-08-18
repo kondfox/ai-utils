@@ -23,6 +23,11 @@ Ready-to-use Claude Code subagents you drop into `.claude/agents/` and wire up w
 - [[agents/plan-critic]] — challenges a plan in plan mode before `ExitPlanMode`.
 - [[agents/solution-critic]] — challenges a finished implementation before it's announced done.
 
+### Skills
+Ready-to-use Claude Code skills you drop into `.claude/skills/` and invoke by name.
+
+- [[skills/plan-prs]] — splits a specification into an ordered chain of PR-sized chunks.
+
 _Future artifact categories (tools, scripts…) will appear here as they're published._
 
 ## Concepts

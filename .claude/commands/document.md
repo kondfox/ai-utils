@@ -16,14 +16,14 @@ Arguments: `$ARGUMENTS`
 ## Scope: what counts as an artifact
 
 Artifacts are the publishable things this repo ships, under these **artifact source directories**:
-`seeds/`, `tools/`, `agents/`, `scripts/`. A change to a file under one of these is what must be
-documented. Changes anywhere else (the wiki itself, `.claude/`, `.githooks/`, root files) are **not**
+`seeds/`, `tools/`, `agents/`, `skills/`, `scripts/`. A change to a file under one of these is what
+must be documented. Changes anywhere else (the wiki itself, `.claude/`, `.githooks/`, root files) are **not**
 artifacts and need no catalog documentation here.
 
 An artifact may be a **single file** (`seeds/<name>.md`) or a **bundle folder** (`agents/<name>/`,
-holding e.g. an agent definition + its `CLAUDE-snippet.md`). For a bundle, treat the whole folder as
-one artifact mapping to one wiki page (`agents/<name>/` → `wiki/agents/<name>.md`); staging any file
-inside it counts as touching that artifact.
+holding e.g. an agent definition + its `CLAUDE-snippet.md`; `skills/<name>/`, holding its `SKILL.md`).
+For a bundle, treat the whole folder as one artifact mapping to one wiki page (`agents/<name>/` →
+`wiki/agents/<name>.md`); staging any file inside it counts as touching that artifact.
 
 ## Determine the change set (both modes)
 
