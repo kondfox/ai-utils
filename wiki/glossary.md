@@ -3,8 +3,9 @@
 Domain vocabulary used across this repo. Terms link to the pages that explain them in depth.
 
 - **Artifact** — any reusable thing this repo publishes from real agentic-engineering workflows: a
-  prompt, tool, technique, script, or agent. Categories so far: [[seeds/_index|seeds]] and
-  [[agents/_index|agents]]. An artifact may be a single file or a bundle folder.
+  prompt, tool, technique, script, or agent. Categories so far: [[seeds/_index|seeds]],
+  [[agents/_index|agents]] and [[skills/_index|skills]]. An artifact may be a single file or a bundle
+  folder.
 
 - **Seed** — a project-independent prompt you paste into Claude Code at the root of your own repo; it
   discovers your project and bootstraps a project-specific utility. See [[seeds/_index]] and
@@ -13,6 +14,14 @@ Domain vocabulary used across this repo. Terms link to the pages that explain th
 - **Agent** — a ready-to-use Claude Code subagent shipped as a bundle folder (`agents/<name>/`: the
   agent definition + its `CLAUDE-snippet.md` wiring). Unlike a seed, it's installed, not bootstrapped.
   See [[agents/_index]].
+
+- **Skill** — a ready-to-use Claude Code skill shipped as a bundle folder (`skills/<name>/`, holding
+  its `SKILL.md`). Installed like an agent, but it loads instructions into the session you're already
+  in rather than running as a separate subagent. See [[skills/_index]].
+
+- **PR-sized chunk** — one pull request's worth of work: a coherent, independently correct vertical
+  slice a reviewer can hold in their head in one sitting. Chunks form a straight-line chain, each
+  building on exactly one predecessor. See [[skills/plan-prs]].
 
 - **plan-critic** — an agent that challenges a plan in plan mode before `ExitPlanMode` until it's
   genuinely solid. See [[agents/plan-critic]].

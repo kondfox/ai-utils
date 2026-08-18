@@ -15,7 +15,7 @@
 set -u
 
 # Directories whose files are publishable artifacts that must be documented.
-ARTIFACT_DIRS=(seeds tools agents scripts)
+ARTIFACT_DIRS=(seeds tools agents skills scripts)
 
 # 1. Defensive re-entry guard.
 if [ -n "${AI_UTILS_DOC_GUARD:-}" ]; then
